@@ -1,0 +1,131 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #caccd3;
+    height: 60px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #333;
+    text-shadow: 1px 1px #ddd;
+}
+
+.header__logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header__logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #333;
+    text-shadow: 1px 1px #ddd;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header__menu-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__menu-list li {
+    margin-right: 20px;
+    flex: 1;
+}
+
+.header__menu-item {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.header__menu-item:hover {
+    background-color: #555;
+}
+
+
+.header__search {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+}
+
+.header__search input {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: none;
+    flex: 1;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23666' d='M497.9 461.9l-137.2-137.2c25.7-34.5 41.2-77.5 41.2-124.7C401.9 103.5 316.5 18.1 209.5 18.1S17.1 103.5 17.1 210.5s85.4 192.4 192.4 192.4c47.2 0 90.2-15.5 124.7-41.2l137.2 137.2c10.9 10.9 28.6 10.9 39.6 0l22.3-22.3c10.9-10.9 10.9-28.6 0-39.6zm-288.4-121.4c-79.9 0-144.9-65-144.9-144.9s65-144.9 144.9-144.9 144.9 65 144.9 144.9-65 144.9-144.9 144.9z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+}
+
+.header__search input::after {
+    content: "\f002";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 18px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.header__search button {
+    display: none;
+}
+
+.header__search-button:focus {
+    outline: none;
+}
+
+.header__search-button svg {
+    top: 50%;
+    right: 190px;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 18px;
+}
+
+.header__logout-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
