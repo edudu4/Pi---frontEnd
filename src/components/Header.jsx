@@ -3,21 +3,21 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 
 import logo from '../assets/logo.svg';
-import '../Header.css';
+//import '../Header.css';
 
 export default function Header() {
     return (
-        <header className="header">
-            <Link to="/">
-                <div className="header__logo">
-
-                    <img src={logo} alt="Logo" className="header__logo-img" />
-                    <h1 className="header__title" >BIBLIOTECA VIRTUAL</h1>
+        <header className="flex justify-between items-center bg-gray-500">
+            
+                <div className="flex">
+                <Link className="flex items-center" to="/">
+                    <img src={logo} alt="Logo" className="w-20" />
+                    <h1 className="mx-5" >BIBLIOTECA VIRTUAL</h1>
+                    </Link>
 
                 </div>
-            </Link>
-            <nav className="header__menu">
-                <ul className="header__menu-list">
+            <nav className="">
+                <ul className="flex gap-3">
                     <Link to="/minhasreservas">
                         <li className="header__menu-item">Minhas Reservas</li>
                     </Link>
@@ -35,8 +35,8 @@ export default function Header() {
                 </ul>
             </nav>
             <Link to="/">
-                <div className="header__logout">
-                    <button className="header__logout-button">Sair</button>
+                <div className="mr-5">
+                    <button className="border text-white rounded p-4">Sair</button>
                 </div>
             </Link>
         </header>

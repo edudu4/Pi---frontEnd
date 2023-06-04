@@ -1,7 +1,7 @@
-import '../Footer.css';
+//import '../Footer.css';
 export default function Footer() {
     return (
-        <footer>
+        <footer className='bg-gray-600 text-white'>
             <p>Eduardo Alves da Rocha - Matricula: 2014290030</p>
             <p>Julio Stohler - Matrícula: 2214290014</p>
             <p>Luís Nascimento - Matrícula: 2214290100</p>

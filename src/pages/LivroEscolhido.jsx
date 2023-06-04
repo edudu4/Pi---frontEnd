@@ -16,10 +16,8 @@ export default function LivroEscolhido() {
  
    return (
         <Section titulo="Livro Escolhido">
-            <Header />
             <p>Conteúdo da Página Livro Escolhido</p>
             <Image book={`/src/assets/${book}`} index={1} />
-            <Footer />
         </Section>
     )
 }

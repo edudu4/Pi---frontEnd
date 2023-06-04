@@ -15,11 +15,13 @@
         const lista = [book1, book2, book3, book4, book5]
 
         return (
-            <main>
-                <Header />
+            <>
+      <Header />
+
+            <main className='flex justify-center flex-col h-full'>
                 <h2>Livros Mais Vendidos</h2>
 
-                <div className="book-carousel">
+                <div className="flex gap-5">
                     {
                         lista.map((book, index) => (
                             <Link to={'/livroescolhido/' + String(book).split('/').pop()} > 
@@ -36,7 +38,8 @@
                     </Link> */}
                 </div>
 
-                <Footer />
             </main>
+            <Footer/>
+            </>
         )
     }
