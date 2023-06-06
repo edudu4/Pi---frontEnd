@@ -18,10 +18,10 @@
             <>
       <Header />
 
-            <main className='flex justify-center flex-col h-full'>
+            <main className='flex text-center flex-col h-full'>
                 <h2>Livros Mais Vendidos</h2>
 
-                <div className="flex gap-5">
+                <div className="flex justify-center gap-5 mt-14">
                     {
                         lista.map((book, index) => (
                             <Link to={'/livroescolhido/' + String(book).split('/').pop()} > 

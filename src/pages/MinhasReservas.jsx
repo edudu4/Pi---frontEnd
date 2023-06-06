@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 export default function MinhasReservas() {
     return (
-        <Section titulo="Minhas Reservas">
+        <Section titulo="" className="">
             <Header />
             <p>Conteúdo da Página Minhas Reservas</p>
             <Footer />

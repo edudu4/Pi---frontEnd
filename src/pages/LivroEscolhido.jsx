@@ -1,9 +1,8 @@
 import Section from "../components/Section";
-import Header from "../components/Header";
-import Footer from "../components/Header";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import Image from "../components/Images";
+import { Link } from 'react-router-dom';
 // import imagem from "../assets/book3.jpg";
 
 export default function LivroEscolhido() {
@@ -15,9 +14,14 @@ export default function LivroEscolhido() {
 //    const path = String(":").concat(book)
  
    return (
-        <Section titulo="Livro Escolhido">
-            <p>Conteúdo da Página Livro Escolhido</p>
+        <Section titulo="Livro Escolhido" className= "my-5">
+            <p className="my-5">Conteúdo da Página Livro Escolhido</p>
             <Image book={`/src/assets/${book}`} index={1} />
+            <div>
+            <Link to="/LivroReservadoSucesso.jsx" className="bg-primary px-4 py-1 rounded">
+                <button className="bg-blue-400 px-4 py-1 rounded">Reservar</button>
+                </Link>
+            </div>
         </Section>
     )
 }
