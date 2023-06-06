@@ -1,5 +1,3 @@
-import Header from './Header'
-import Footer from './Footer'
 import '../Principal.css';
 import book1 from '../assets/book1.jpg';
 import book2 from '../assets/book2.jpg';
@@ -14,8 +12,7 @@ export default function Principal() {
 
 
     return (
-        <main>
-            <Header />
+        <>
             <h2>Livros Mais Vendidos</h2>
             
                 <div className="book-carousel">
@@ -27,8 +24,6 @@ export default function Principal() {
                     <img src={book5} alt="Book 5" />
                 </Link>
                 </div>
-            
-            <Footer />
-        </main>
+    </>
     )
 }
