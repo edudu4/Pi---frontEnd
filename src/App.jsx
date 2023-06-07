@@ -16,7 +16,7 @@ export default function App() {
           <Route path="/minhasreservas" element={<MinhasReservas />} />
           <Route path="/livroescolhido" element={<LivroEscolhido />} />
           <Route path="/livropesquisado" element={<LivrosPesquisados />} />
-          <Route path="/sucesso" element={<LivroReservadoSucesso />} />
+          <Route path="/livroreservadosucesso" element={<LivroReservadoSucesso />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </Layout>

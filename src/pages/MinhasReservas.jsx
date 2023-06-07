@@ -2,7 +2,7 @@ import Section from "../components/Section";
 
 export default function MinhasReservas() {
     return (
-        <Section titulo="Minhas Reservas">
+        <Section titulo="" className="">
             <p>Conteúdo da Página Minhas Reservas</p>
         </Section>
     )
