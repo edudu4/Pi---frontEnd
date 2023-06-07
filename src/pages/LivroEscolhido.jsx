@@ -18,7 +18,7 @@ export default function LivroEscolhido() {
             <p className="my-5">Conteúdo da Página Livro Escolhido</p>
             <Image book={`/src/assets/${book}`} index={1} />
             <div>
-            <Link to="/LivroReservadoSucesso.jsx" className="bg-primary px-4 py-1 rounded">
+            <Link to="/livroreservadosucesso" className="bg-primary px-4 py-1 rounded">
                 <button className="bg-blue-400 px-4 py-1 rounded">Reservar</button>
                 </Link>
             </div>

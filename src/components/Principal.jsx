@@ -1,5 +1,3 @@
-    import Header from './Header'
-    import Footer from './Footer'
     import '../Principal.css';
     import book1 from '../assets/book1.jpg';
     import book2 from '../assets/book2.jpg';
@@ -16,7 +14,6 @@
 
         return (
             <>
-      <Header />
 
             <main className='flex text-center flex-col h-full'>
                 <h2>Livros Mais Vendidos</h2>
@@ -24,7 +21,7 @@
                 <div className="flex justify-center gap-5 mt-14">
                     {
                         lista.map((book, index) => (
-                            <Link to={'/livroescolhido/' + String(book).split('/').pop()} > 
+                            <Link to={'/livroescolhido/' /*+ String(book).split('/').pop() */} > 
                                 <Image book={book} index={index} />
                             </Link>
                         ))
@@ -39,7 +36,6 @@
                 </div>
 
             </main>
-            <Footer/>
             </>
         )
     }
