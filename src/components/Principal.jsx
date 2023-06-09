@@ -15,8 +15,8 @@
         return (
             <>
 
-            <main className='flex text-center flex-col h-full'>
-                <h2>Livros Mais Vendidos</h2>
+            <main className='flex text-center flex-col h-full mt-8'>
+                <h2 className='font-bold'>Livros Mais Vendidos</h2>
 
                 <div className="flex justify-center gap-5 mt-14">
                     {

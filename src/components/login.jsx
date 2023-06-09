@@ -8,11 +8,11 @@ const Login = () => {
         <form action="">
             <div className="user-caixa my-2 ml-2">
                 <input type="text" name="" id=""/>
-                <label for="" className='mx-2 font-bold'>Usuario</label>
+                <label for="" className='mx-2'>Usuario</label>
             </div>
             <div className="user-caixa my-2 ml-2">
                 <input type="password" name="" id=""/>
-                <label for="" className='mx-2 font-bold'>Senha</label>
+                <label for="" className='mx-2'>Senha</label>
             </div>
             <a href="/home">
                 <span></span>
