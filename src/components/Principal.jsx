@@ -17,7 +17,7 @@
 
             <main className='flex text-center flex-col h-full mt-8'>
                 <h2 className='font-bold'>Livros Mais Vendidos</h2>
-
+                <hr className='Barra'/>                
                 <div className="flex justify-center gap-5 mt-14">
                     {
                         lista.map((book, index) => (
