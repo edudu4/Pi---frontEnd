@@ -1,0 +1,32 @@
+[
+    {
+        "id" : "1",
+        "nome": "O Homem de Giz",
+        "descricao": "Alternando habilidosamente entre presente e passado, O Homem de Giz traz o melhor do suspense: personagens maravilhosamente construídos, mistérios de prender o fôlego e reviravoltas que vão impressionar até os leitores mais escaldados.",
+        "caminhoImagem": "./src/assets/book1.jpg"
+    },
+    {
+        "id" : "2",
+        "nome": "Uma Questão Pessoal",
+        "descricao": "Uma Questão Pessoal é um romance policial de 2014 escrito por Lee Child sendo o décimo nono livro da série em que o personagem major Jack Reacher domina a acção. O enredo do livro gira em torno da busca por Reacher de um franco-atirador que tentou assassinar o presidente da França. A história é contada na primeira pessoa.",
+        "caminhoImagem": "./src/assets/book2.jpg"
+    },
+    {
+        "id" : "3",
+        "nome": "Bíblia Sagrada",
+        "descricao": "Bíblia é o texto religioso de valor sagrado para o Cristianismo, em que a interpretação religiosa do motivo da existência do homem na Terra sob a perspectiva judaica é narrada por humanos.",
+        "caminhoImagem": "./src/assets/book3.jpg"
+    },
+    {
+        "id" : "4",
+        "nome": "A Voz do Silêncio",
+        "descricao": "Considerada uma das obras-primas da literatura mística mundial e, por muitos, uma prosa em verso, cheia de inspiração espiritual, A Voz do Silêncio toca-nos, não pela exposição de fatos reunidos de livros, mas por ser um apelo aos sentidos mais divinos de nossa natureza.",
+        "caminhoImagem": "./src/assets/book4.jpg"
+    },
+    {
+        "id" : "5",
+        "nome": "O Poder do Hábito",
+        "descricao": "Durante os últimos dois anos, uma jovem transformou quase todos os aspectos de sua vida. Parou de fumar, correu uma maratona e foi promovida. Em um laboratório, neurologistas descobriram que os padrões dentro do cérebro dela mudaram de maneira fundamental.",
+        "caminhoImagem": "./src/assets/book5.jpg"
+    }
+]

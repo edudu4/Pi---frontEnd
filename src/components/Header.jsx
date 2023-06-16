@@ -1,21 +1,30 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import logo from '../assets/logo.svg';
+import { useContext } from "react";
+import UserContext from "../contexts/UserContext";
 //import '../Header.css';
 
 export default function Header() {
+    const { handleLogout } = useContext(UserContext)
+    const navigate = useNavigate()
+
+    function handleClick(event) {
+        handleLogout()
+        navigate("/")
+    }
+
     return (
         <header className="flex justify-between items-center bg-gray-500">
-            
-                <div className="flex">
+
+            <div className="flex">
                 <Link className="flex items-center" to="/">
                     <img src={logo} alt="Logo" className="w-20" />
-                    <h1 className="mx-5" >BIBLIOTECA VIRTUAL</h1>
-                    </Link>
+                    <h1 className="mx-5 text-4xl" >BIBLIOTECA VIRTUAL</h1>
+                </Link>
+            </div>
 
-                </div>
             <nav className="">
                 <ul className="flex gap-3">
                     <Link to="/minhasreservas">
@@ -24,21 +33,17 @@ export default function Header() {
                     <li className="header__search">
                         <input type="text"
                             placeholder="Pesquisar Livros"
-
                         />
-
                         <button className="header__search-button">
-                            <FontAwesomeIcon icon={faSearch} />
+                        <FontAwesomeIcon icon="fa-magnifying-glass" style={{color: "#090707",}} />
                         </button>
-
                     </li>
                 </ul>
             </nav>
-            <Link to="/">
-                <div className="mr-5">
-                    <button className="border text-white rounded p-4">Sair</button>
-                </div>
-            </Link>
+
+            <div className="mr-5">
+                <button className="border text-white rounded p-4" onClick={handleClick}>Sair</button>
+            </div>
         </header>
     )
 }
