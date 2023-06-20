@@ -1,8 +1,11 @@
 import { initializeApp } from "firebase/app";
 
+export const urlApi = "https://back-front-pi-default-rtdb.firebaseio.com/"
+
 const firebaseConfig = {
   apiKey: "AIzaSyA3mY2K-AMs8OtLoHS6t9X-Dcon41leEDI",
   authDomain: "back-front-pi.firebaseapp.com",
+  databaseURL: "https://back-front-pi-default-rtdb.firebaseio.com",
   projectId: "back-front-pi",
   storageBucket: "back-front-pi.appspot.com",
   messagingSenderId: "163802549132",

@@ -33,7 +33,6 @@ export default function LoginForm(props) {
     }
 
     function onSubmit(data) {
-        console.log("Formulário enviado!", data)
         const { email, senha } = data
         setErrorLogin("")
         try {

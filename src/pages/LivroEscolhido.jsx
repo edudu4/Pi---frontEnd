@@ -1,21 +1,39 @@
 import Section from "../components/Section";
 import { useParams } from "react-router-dom";
-//import { useState } from "react";
-//import Image from "../components/Images";
 import Image from "../components/Images";
-import { Link } from 'react-router-dom';
-import livrosData from '../data/LivroData.json'
-// import imagem from "../assets/book3.jpg";
+import { useNavigate } from 'react-router-dom';
+import { useContext, useEffect, useState } from "react";
+import LivroContext from "../contexts/LivroContext";
+import UserContext from "../contexts/UserContext";
 
 export default function LivroEscolhido(props) {
+    const { userId } = useContext(UserContext)
     const { id } = useParams()
-    const livro = livrosData.find((livro) => livro.id === id)
-    //const {book} = useParams()
-    //const [imagem, setImagem] = useState(null);
+    const { livros, reservaLivro, verificarReservaLivro } = useContext(LivroContext)
+    const navigate = useNavigate()
 
-    //const nome = "C:\Users\arlet\Desktop\Pi---frontEnd\src\assets\book1.jpg"
-    //console.log(book);
-    //    const path = String(":").concat(book)
+    const livro = livros.find((livro) => livro.key === id)
+    const [usuarioJaReservou, setUsuarioJaReservou] = useState(false)
+
+    useEffect(() => {
+        if (!livro || userId === null) {
+            return navigate('/Error')
+        }
+        const fetchReservaLivro = async () => {
+            const usuarioJaReservou = await verificarReservaLivro(livro.key, userId)
+            setUsuarioJaReservou(usuarioJaReservou)
+        }
+        fetchReservaLivro()
+    }, [livro, userId, verificarReservaLivro()])
+
+    function handleReservar(key) {
+        if (usuarioJaReservou) {
+            navigate('/errorreserva')
+        } else {
+            reservaLivro(key, userId)
+            navigate('/livroreservadosucesso')
+        }
+    }
 
     return (
         <>
@@ -26,9 +44,9 @@ export default function LivroEscolhido(props) {
                 <p className="my-5">{livro.descricao}</p>
                 <Image book={`/${livro.caminhoImagem}`} alt={livro.nome} />
                 <div>
-                    <Link to="/livroreservadosucesso" className="bg-primary px-4 py-1 rounded">
-                        <button className="bg-blue-400 px-4 py-1 rounded">Reservar</button>
-                    </Link>
+                    <div className="bg-primary px-4 py-1 rounded">
+                        <button onClick={() => handleReservar(livro.key)} className="bg-blue-400 px-4 py-1 rounded">Reservar</button>
+                    </div>
                 </div>
             </Section>
         </>
