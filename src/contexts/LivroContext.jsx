@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { listaLivros, reservarLivro, listaLivrosReservados, verificarLivrosReservados } from "../services/BookService";
+import { listaLivros, reservarLivro, listaLivrosReservados, verificarLivrosReservados, removerLivro } from "../services/BookService";
 
 const LivroContext = createContext({
     livros: [],
@@ -9,6 +9,7 @@ const LivroContext = createContext({
     reservaLivro: () => { },
     verificarReservaLivro: () => { },
     listarLivrosPesquisados: () => { },
+    removerLivroReservado: () => { },
 })
 
 export function LivroContextProvider(props) {
@@ -62,6 +63,10 @@ export function LivroContextProvider(props) {
         return verificarLivrosReservados(livroId, userId)
     }
 
+    function removerLivroReservado(livroId, userId) {
+        return removerLivro(livroId, userId)
+    }
+
     const contexto = {
         livros,
         livrosReservados,
@@ -70,6 +75,7 @@ export function LivroContextProvider(props) {
         listarLivrosPesquisados,
         listarLivrosReservados,
         verificarReservaLivro,
+        removerLivroReservado,
     }
 
     return (
