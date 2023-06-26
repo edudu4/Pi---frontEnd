@@ -5,12 +5,18 @@ import "../login.css"
 export default function Cadastro() {
     return (
         <div className='body'>
-            <div className="login-caixa">
-                <h2>Cadastro</h2>
+            <div className="login-caixa bg-blue-500">
+            <h2 className="font-roboto font-bold text-3xl">Cadastro</h2>
                 <CadastroForm />
                 <br/>
                 <Link to="/">
-                    <h3>Voltar</h3>
+                <div className="flex justify-center">
+                        <div className="w-40">
+                            <button className="w-full h-full flex items-center justify-center text-white font-bold " type="button">
+                                Voltar
+                            </button>
+                        </div>
+                    </div>
                 </Link>
             </div>
         </div>

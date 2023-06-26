@@ -34,9 +34,9 @@ export default function LivroEscolhido(props) {
     return (
         <div className="flex justify-center items-center bg-gray-100">
             <div className="max-w-md bg-white rounded-lg shadow-md p-8 mt-36 mb-28">
-                <h2 className="text-3xl font-bold text-center mb-4">{livro.nome}</h2>
+                <h2 className="text-3xl font-roboto-bold text-center mb-4">{livro.nome}</h2>
                 <hr className="my-4" />
-                <Section titulo="Descrição">
+                <Section titulo="" className="text-justify px-6 font-roboto-bold">
                     <div className="mt-6">
                         <p className="mb-4">{livro.descricao}</p>
                     </div>
@@ -49,7 +49,7 @@ export default function LivroEscolhido(props) {
                 <div className="flex justify-center mt-4">
                     <button
                         onClick={() => handleReservar(livro.key)}
-                        className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors"
+                        className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors font-bold"
                         disabled={usuarioJaReservou}
                     >
                         {usuarioJaReservou ? "Já Reservado" : "Reservar"}

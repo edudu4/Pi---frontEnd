@@ -12,7 +12,7 @@ export default function Principal() {
 
   return (
     <section className="flex flex-col items-center min-h-screen pb-20 bg-gray-100 mt-14">
-      <h2 className="text-3xl font-bold text-gray-800 mt-8 mb-6">Livros Mais Vendidos</h2>
+      <h2 className="text-3xl font-roboto-bold text-gray-800 mt-8 mb-6">Livros Mais Vendidos</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
         {livros.map((livro) => (
           <Link
@@ -28,12 +28,12 @@ export default function Principal() {
               </div>
               <hr className="my-4" />
               <div className="px-4 py-3">
-                <h3 className="flex items-center justify-center text-xl font-semibold truncate">{livro.nome}</h3>
+                <h3 className="flex items-center justify-center text-xl font-roboto-bold truncate">{livro.nome}</h3>
               </div>
             </div>
           </Link>
         ))}
       </div>
     </section>
-  );
+  )
 }

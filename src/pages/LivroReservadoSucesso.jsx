@@ -9,8 +9,8 @@ export default function LivroReservadoSucesso() {
         className="text-green-600 text-9xl mb-4"
       />
       <Section titulo="Sucesso!" className="text-center text-4xl mb-8">
-        <p>Livro reservado com sucesso</p>
+        <p className="mt-4">Livro reservado com sucesso.</p>
       </Section>
     </div>
-  );
+  )
 }

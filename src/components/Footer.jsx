@@ -8,38 +8,34 @@ export default function Footer() {
         <div className="border-b border-white pb-2 sm:border-0">
           <FontAwesomeIcon
             icon={faUser}
-            className="inline-block text-lg text-white mr-2"
-          />
-          <span className="text-sm text-white">
+            className="inline-block text-lg text-white mr-2" />
+          <span className="text-sm text-white font-bold">
             Eduardo Alves - Matrícula: 2014290030
           </span>
         </div>
         <div className="border-b border-white pb-2 sm:border-0">
           <FontAwesomeIcon
             icon={faUser}
-            className="inline-block text-lg text-white mr-2"
-          />
-          <span className="text-sm text-white">
+            className="inline-block text-lg text-white mr-2" />
+          <span className="text-sm text-white font-bold">
             Julio Stohler - Matrícula: 2214290014
           </span>
         </div>
         <div className="border-b border-white pb-2 sm:border-0">
           <FontAwesomeIcon
             icon={faUser}
-            className="inline-block text-lg text-white mr-2"
-          />
-          <span className="text-sm text-white">
+            className="inline-block text-lg text-white mr-2" />
+          <span className="text-sm text-white font-bold">
             Luís Nascimento - Matrícula: 2214290100
           </span>
         </div>
         <div className="sm:col-span-4 md:col-span-1 md:text-right">
           <FontAwesomeIcon
             icon={faCopy}
-            className="inline-block text-lg text-white mr-2"
-          />
-          <span className="text-sm">Direitos Autorais 2023</span>
+            className="inline-block text-lg text-white mr-2" />
+          <span className="text-sm font-bold italic">Direitos Autorais 2023</span>
         </div>
       </div>
     </footer>
-  );
+  )
 }
