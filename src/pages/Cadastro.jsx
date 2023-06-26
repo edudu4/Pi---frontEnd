@@ -1,7 +1,7 @@
 import CadastroForm from './CadastroForm'
 import { Link } from 'react-router-dom'
 import React from 'react'
-import "../login.css"
+import "../styles/Login.css"
 export default function Cadastro() {
     return (
         <div className='body'>
