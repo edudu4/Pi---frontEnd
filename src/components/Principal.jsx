@@ -10,6 +10,7 @@ export default function Principal() {
     listarLivros();
   }, []);
 
+
   return (
     <section className="flex flex-col items-center min-h-screen pb-20 bg-gray-100">
       <h2 className="text-2xl font-semibold text-gray-700 mt-8 mb-6">Livros Mais Vendidos</h2>
