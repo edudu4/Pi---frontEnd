@@ -63,3 +63,28 @@ export async function reservarLivro(livroId, userId) {
         throw new Error("Erro ao reservar livro ", error.message)
     }
 }
+
+//DELETE LivrosReservados
+export async function removerLivro(livroId, userId) {
+
+    try {
+        const livrosReservados = await listaLivrosReservados(userId)
+
+        const livroReservado = livrosReservados.find(
+            (livro) => livro.livroId === livroId
+        )
+
+        if (livroReservado) {
+            const response = await fetch(`${urlApi}livrosReservados/${livroReservado.key}.json`, {
+                method: "DELETE",
+            })
+
+            if (!response.ok) {
+                throw new Error("Erro ao remover livro")
+            }
+        }
+
+    } catch (error) {
+        throw new Error("Erro ao remover livro ", error.message)
+    }
+}

@@ -1,11 +1,10 @@
 import Layout from "./components/Layout";
-import Principal from "./components/Principal";
+import Principal from "./pages/Principal";
 import LivroEscolhido from "./pages/LivroEscolhido";
 import LivroReservadoSucesso from "./pages/LivroReservadoSucesso";
 import LivrosPesquisados from "./pages/LivrosPesquisados";
 import MinhasReservas from './pages/MinhasReservas';
 import Error404 from './pages/Error404';
-import ErrorReserva from './pages/ErrorReserva'
 import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
@@ -26,7 +25,6 @@ export default function App() {
             <Route path="/livroescolhido/:id" element={<LivroEscolhido />} />
             <Route path="/livropesquisado" element={<LivrosPesquisados />} />
             <Route path="/livroreservadosucesso" element={<LivroReservadoSucesso />} />
-            <Route path="/errorreserva" element={<ErrorReserva />} />
           </Route>
           : <Route path="/">
             <Route index element={<Login />} />

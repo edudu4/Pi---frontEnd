@@ -42,15 +42,14 @@ export default function Header() {
       <div className="flex items-center">
         <Link className="flex items-center" to="/">
           <img src={logo} alt="Logo" className="w-20 h-10" />
-          <h1 className="mx-5 text-3xl font-bold">BIBLIOTECA VIRTUAL</h1>
+          <h1 className="mx-5 text-3xl font-roboto-bold  ">BIBLIOTECA VIRTUAL</h1>
         </Link>
       </div>
-
       <div className="relative w-1/3 mx-auto">
         <input
           type="text"
           placeholder="Pesquisar Livros"
-          className="rounded px-3 py-1 w-full bg-white text-gray-900"
+          className="rounded px-3 py-1 w-full bg-white text-gray-900 font-roboto"
           value={pesquisa}
           onChange={(e) => setPesquisa(e.target.value)}
         />
@@ -76,20 +75,19 @@ export default function Header() {
           <FontAwesomeIcon icon="fa-magnifying-glass" />
         </button>
       </div>
-
       <div className="flex gap-4">
         <Link to="/minhasreservas">
-          <button className="text-white bg-blue-700 hover:bg-blue-800 rounded-full py-2 px-4 text-sm transition-colors duration-200 ease-in-out">
+          <button className="text-white bg-blue-700 hover:bg-blue-800 rounded-full py-2 px-4 text-sm transition-colors duration-200 ease-in-out font-bold">
             Minhas Reservas
           </button>
         </Link>
         <button
-          className="text-white bg-red-500 hover:bg-red-600 rounded-full py-2 px-4 text-sm transition-colors duration-200 ease-in-out"
+          className="text-white bg-red-500 hover:bg-red-600 rounded-full py-2 px-4 text-sm transition-colors duration-200 ease-in-out font-bold"
           onClick={handleSair}
         >
           Sair
         </button>
       </div>
     </header>
-  );
+  )
 }
