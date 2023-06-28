@@ -3,7 +3,7 @@ import { faUser, faCopy } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-500 text-white fixed bottom-0 left-0 right-0 py-8 px-4 shadow-inner">
+    <footer className="bg-blue-500 text-white fixed bottom-0 left-0 right-0 py-4 px-4 shadow-inner">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 text-center">
         <div className="border-b border-white pb-2 sm:border-0">
           <FontAwesomeIcon
