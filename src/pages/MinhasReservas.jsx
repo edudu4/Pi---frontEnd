@@ -17,7 +17,8 @@ export default function MinhasReservas() {
   }
 
   return (
-    <Section className="flex flex-col items-center p-4">
+
+    <Section className="flex flex-col items-center p-4">  
       {livrosReservados === null || livrosReservados.length === 0 ? (
         <p className="text-gray-700 mt-28 font-roboto-bold">Você não possui nenhuma reserva de livros.</p>
       ) : (
