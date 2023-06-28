@@ -17,7 +17,7 @@ export default function MinhasReservas() {
   }
 
   return (
-    <Section titulo="Minhas Reservas" className="flex flex-col items-center p-4">
+    <Section className="flex flex-col items-center p-4">
       {livrosReservados === null || livrosReservados.length === 0 ? (
         <p className="text-gray-700 mt-28 font-roboto-bold">Você não possui nenhuma reserva de livros.</p>
       ) : (
@@ -27,7 +27,7 @@ export default function MinhasReservas() {
               <div className="flex items-center justify-center overflow-hidden mt-6">
                 <Image book={livro.caminhoImagem} className="w-full h-auto object-cover" />
               </div>
-              <div className="flex flex-col justify-between flex-grow p-4">
+              <div className="flex flex-col justify-between flex-grow p-1">
                 <div>
                   <h2 className="flex items-center justify-center text-lg font-bold text-gray-800">{livro.nome}</h2>
                   <p className="text-gray-600 mt-2 flex-grow ">{livro.descricao}</p>
