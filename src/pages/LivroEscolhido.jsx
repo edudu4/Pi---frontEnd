@@ -22,26 +22,32 @@ export default function LivroEscolhido(props) {
         const fetchReservaLivro = async () => {
             const usuarioJaReservou = await verificarReservaLivro(livro.key, userId);
             setUsuarioJaReservou(usuarioJaReservou);
-        };
-        fetchReservaLivro();
+        }
+        fetchReservaLivro()
     }, [livro, userId, verificarReservaLivro()]);
 
-    function handleReservar(key) {
-        reservaLivro(key, userId);
+    function handleReservar(livroId) {
+        const dataHora = new Date()
+        const dataReserva = dataHora.toLocaleDateString()
+
+        const dataEntrega = new Date(dataHora)
+        dataEntrega.setMonth(dataEntrega.getMonth() + 1)
+
+        reservaLivro(livroId, userId, dataReserva, dataEntrega.toLocaleDateString())
         navigate('/livroreservadosucesso');
     }
 
     return (
         <div className="flex justify-center items-center bg-gray-100">
-            <div className="max-w-md bg-white rounded-lg shadow-md p-8 mt-36 mb-28">
+            <div className="max-w-md bg-white rounded-lg shadow-md p-8 mt-28 mb-48">
                 <h2 className="text-3xl font-roboto-bold text-center mb-4">{livro.nome}</h2>
-                <hr className="my-4" />
+                <hr className="border-gray-800 my-2" />
                 <Section titulo="" className="text-justify px-6 font-roboto-bold">
                     <div className="mt-6">
                         <p className="mb-4">{livro.descricao}</p>
                     </div>
                 </Section>
-                <hr className="my-4" />
+                <hr className="border-gray-300 my-4" />
                 <div className="flex justify-center">
                     <Image book={`/${livro.caminhoImagem}`} alt={livro.nome} />
                 </div>
@@ -58,5 +64,4 @@ export default function LivroEscolhido(props) {
             </div>
         </div>
     )
-
 }

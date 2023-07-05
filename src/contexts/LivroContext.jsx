@@ -32,6 +32,9 @@ export function LivroContextProvider(props) {
             for (const livroId of livrosReservadosIds) {
                 const livro = livros.find((livro) => livroId.livroId === livro.key)
                 if (livro) {
+                    livro.dataEntrega = livroId.dataEntrega
+                    livro.dataReserva = livroId.dataReserva
+
                     livrosReservadosComDetalhes.push(livro);
                 }
             }
@@ -50,9 +53,9 @@ export function LivroContextProvider(props) {
         }
     }
 
-    async function reservaLivro(livroId, userId) {
+    async function reservaLivro(livroId, userId, dataReserva, dataEntrega) {
         try {
-            await reservarLivro(livroId, userId) //chama serviço para reservar o livro
+            await reservarLivro(livroId, userId, dataReserva, dataEntrega)
             setLivrosReservados((livrosReservados) => [...livrosReservados, livroId])
         } catch (error) {
             throw new Error(error.message)

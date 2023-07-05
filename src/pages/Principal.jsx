@@ -11,13 +11,11 @@ export default function Principal() {
   }, [])
 
   return (
-    <section className="flex flex-col items-center min-h-screen pb-20 bg-gray-100 mt-14">
-      <h2 className="text-3xl font-roboto-bold text-gray-800 mt-8 mb-6">Livros Mais Vendidos</h2>
+    <section className="flex flex-col items-center min-h-screen pb-20 bg-gray-100">
+      <h2 className="text-3xl font-roboto-bold text-gray-800 mt-20 mb-6">Livros Mais Vendidos</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
         {livros.map((livro) => (
-          <Link
-            to={`/livroescolhido/${livro.key}`}
-            key={livro.key}
+          <Link to={`/livroescolhido/${livro.key}`} key={livro.key}
             className="hover:scale-105 transition-all duration-300">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="h-56 w-full flex justify-center items-center">
