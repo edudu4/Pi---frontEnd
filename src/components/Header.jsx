@@ -6,6 +6,7 @@ import UserContext from "../contexts/UserContext";
 import LivroContext from "../contexts/LivroContext";
 
 export default function Header() {
+
   const { handleLogout } = useContext(UserContext);
   const { listarLivrosPesquisados } = useContext(LivroContext);
   const navigate = useNavigate();
