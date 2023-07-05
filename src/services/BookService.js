@@ -48,10 +48,12 @@ export async function verificarLivrosReservados(livroId, userId) {
 
 
 //POST LivrosReservados
-export async function reservarLivro(livroId, userId) {
+export async function reservarLivro(livroId, userId, dataReserva, dataEntrega) {
     const LivroReservado = {
         livroId,
         userId,
+        dataReserva,
+        dataEntrega,
     }
     try {
         await fetch(urlApi + "livrosReservados.json", {
