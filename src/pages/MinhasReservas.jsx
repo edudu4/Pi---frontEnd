@@ -28,9 +28,9 @@ export default function MinhasReservas() {
           {livrosReservados.map((livro) => (
             <li key={livro.key} className="bg-white rounded-lg shadow flex flex-col">
               <Link to={`/livroescolhido/${livro.key}`} key={livro.key}>
-              <div className="flex items-center justify-center overflow-hidden mt-6">
-                <Image book={livro.caminhoImagem} className="w-full h-auto object-cover" />
-              </div>
+                <div className="flex items-center justify-center overflow-hidden mt-6">
+                  <Image book={livro.caminhoImagem} className="w-full h-auto object-cover" />
+                </div>
               </Link>
               <div className="flex flex-col justify-between flex-grow p-4">
                 <div>

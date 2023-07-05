@@ -11,7 +11,7 @@ export default function Principal() {
   }, [])
 
   return (
-    <section className="flex flex-col items-center min-h-screen pb-20 bg-gray-100">
+    <section className="flex flex-col items-center min-h-screen pb-20">
       <h2 className="text-3xl font-roboto-bold text-gray-800 mt-20 mb-6">Livros Mais Vendidos</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
         {livros.map((livro) => (
