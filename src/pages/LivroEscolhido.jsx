@@ -39,7 +39,7 @@ export default function LivroEscolhido(props) {
     }
 
     return (
-        <div className="flex justify-center items-center mt-36">
+        <div className="flex justify-center items-center mt-36 mb-32">
             <div className="max-w-md bg-white rounded-lg shadow-md p-8">
                 <h2 className="text-3xl font-roboto-bold text-center mb-4">{livro.nome}</h2>
                 <hr className="border-gray-800 my-2" />
